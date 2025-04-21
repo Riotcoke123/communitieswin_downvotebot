@@ -8,7 +8,6 @@ from selenium.webdriver.chrome.options import Options
 import logging
 import time
 
-# Credentials & Config
 USERNAME = 'USERNAME'
 PASSWORD = 'PASSWORD'
 URL = "https://communities.win/c/funny/new"
@@ -17,12 +16,9 @@ USERNAME_CSS = "#field-9"
 PASSWORD_CSS = "#field-10"
 SUBMIT_CSS = "#chakra-modal-8 > footer > button.chakra-button.css-za4or7"
 DOWNVOTE_BUTTON_CSS_SELECTOR = 'div > div > div > div.sc-ct8gzq-1.dzTwau.vote > button.sc-1tigerj-0.sc-1tigerj-1.fQDdlK.fQWcKY.down.vote-delta'
-SKIP_CSS = 'div > div > div > div.sc-ct8gzq-1.gwRACt.vote > button.sc-1tigerj-0.sc-1tigerj-1.fQDdlK.fQWcKY.down.vote-delta.animate.active' # It seems this is the same as DOWNVOTE_BUTTON_CSS_SELECTOR but with extra classes for active state
-
-# Setup logging
+SKIP_CSS = 'div > div > div > div.sc-ct8gzq-1.gwRACt.vote > button.sc-1tigerj-0.sc-1tigerj-1.fQDdlK.fQWcKY.down.vote-delta.animate.active' 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 
-# Setup Chrome
 options = Options()
 options.add_argument("--start-maximized")
 options.add_argument("--disable-extensions")
@@ -34,14 +30,11 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 wait = WebDriverWait(driver, 15)
 
 try:
-    # Step 1: Open page
     driver.get(URL)
 
-    # Step 2: Open login popup
     login_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, LOGIN_BUTTON_CSS)))
     login_button.click()
 
-    # Step 3: Fill login form
     username_input = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, USERNAME_CSS)))
     password_input = driver.find_element(By.CSS_SELECTOR, PASSWORD_CSS)
 
@@ -50,9 +43,8 @@ try:
 
     submit = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, SUBMIT_CSS)))
     submit.click()
-    time.sleep(6)  # Wait for login
+    time.sleep(6)  
 
-    # Step 4: Find and click downvote buttons
     downvote_buttons = driver.find_elements(By.CSS_SELECTOR, DOWNVOTE_BUTTON_CSS_SELECTOR)
     logging.info(f"Found {len(downvote_buttons)} downvote buttons.")
 
@@ -60,7 +52,7 @@ try:
         try:
             button.click()
             logging.info("Clicked a downvote button.")
-            time.sleep(1)  # Add a small delay between downvotes
+            time.sleep(1)  
         except Exception as e:
             logging.warning(f"Could not click downvote button: {e}")
 
