@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>communities.win down vote bot</h1>
+    <h1>Communities.win Down Vote Bot</h1>
     <p>This is a Python script using Selenium to automatically downvote posts on communities.win subreddits that have downvoting enabled.</p>
     <h2>License</h2>
     <p>This project is licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License v3.0</a>.</p>
