@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Communities.win Down Vote Bot</title>
 </head>
 <body>
     <h1>Communities.win Down Vote Bot</h1>
