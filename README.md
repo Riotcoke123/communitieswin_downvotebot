@@ -35,7 +35,6 @@
             <pre><code class="language-python">USERNAME = 'YOUR_USERNAME'
 PASSWORD = 'YOUR_PASSWORD'</code></pre>
         </li>
-        <li><b>Important:</b> Keep your credentials safe and avoid sharing the script publicly if it contains them.</li>
     </ol>
     <p><strong>Optional but Recommended:</strong> Add your <a href="https://docs.scored.co/" target="_blank">Scored.co API key</a> to the script if you want improved access to site functionality or plan to scale usage.</p>
     <h2>Usage</h2>
@@ -51,8 +50,7 @@ PASSWORD = 'YOUR_PASSWORD'</code></pre>
         </li>
     </ol>
     <p>Replace <code>your_script_name.py</code> with the actual name of the Python file.</p>
-
-<h2>Description of the Code</h2>
+    <h2>Description of the Code</h2>
     <p>The Python script performs the following actions:</p>
     <ol>
         <li>Imports necessary libraries from Selenium for browser automation, logging for status updates, and time for delays.</li>
