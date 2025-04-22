@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communities.win Down Vote Bot</title>
 </head>
 <body>
     <h1>Communities.win Down Vote Bot</h1>
     <p>This is a Python script using Selenium to automatically downvote posts on communities.win subreddits that have downvoting enabled.</p>
-    <h2>License</h2>
-    <p>This project is licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License v3.0</a>.</p>
     <h2>Prerequisites</h2>
     <ul>
         <li>Python 3.6 or higher</li>
@@ -27,17 +26,18 @@
         </li>
     </ol>
     <h2>Setup</h2>
-    <p>Before running the script, you need to configure your credentials:</p>
+    <p>Before running the script, you need to configure your bot account credentials:</p>
     <ol>
-        <li>Open the Python script (likely named something like <code>main.py</code> or <code>downvoter.py</code>) in a text editor.</li>
-        <li>Locate the following lines:
+        <li>Go to <a href="https://communities.win/" target="_blank">https://communities.win/</a> and sign up for a new account.</li>
+        <li>Use a separate account specifically for bot activity — this is recommended to avoid any issues with your main account.</li>
+        <li>After signing up, open the Python script (likely named <code>main.py</code> or <code>downvoter.py</code>) in a text editor.</li>
+        <li>Locate the following lines and replace them with your actual credentials:
             <pre><code class="language-python">USERNAME = 'YOUR_USERNAME'
-PASSWORD = 'YOUR_PASSWORD'
-</code></pre>
+PASSWORD = 'YOUR_PASSWORD'</code></pre>
         </li>
-        <li>Replace <code>'YOUR_USERNAME'</code> with your communities.win username and <code>'YOUR_PASSWORD'</code> with your password.</li>
-        <li><b>Important:</b> Be cautious when storing your credentials in a script.</li>
+        <li><b>Important:</b> Keep your credentials safe and avoid sharing the script publicly if it contains them.</li>
     </ol>
+    <p><strong>Optional but Recommended:</strong> Add your <a href="https://docs.scored.co/" target="_blank">Scored.co API key</a> to the script if you want improved access to site functionality or plan to scale usage.</p>
     <h2>Usage</h2>
     <p>To run the script on a specific communities.win subreddit (with downvoting enabled), modify the <code>URL</code> variable in the Python script before execution. For example, to target the <code>/c/funny/new</code> subreddit:</p>
     <ol>
@@ -51,7 +51,8 @@ PASSWORD = 'YOUR_PASSWORD'
         </li>
     </ol>
     <p>Replace <code>your_script_name.py</code> with the actual name of the Python file.</p>
-    <h2>Description of the Code</h2>
+
+<h2>Description of the Code</h2>
     <p>The Python script performs the following actions:</p>
     <ol>
         <li>Imports necessary libraries from Selenium for browser automation, logging for status updates, and time for delays.</li>
@@ -71,5 +72,7 @@ PASSWORD = 'YOUR_PASSWORD'
     </ol>
     <h2>Disclaimer</h2>
     <p>Use this script responsibly and ethically. Automating interactions on websites may violate their terms of service. The author is not responsible for any consequences resulting from the use of this script.</p>
+    <h2>License</h2>
+    <p>This project is licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU General Public License v3.0</a>.</p>
 </body>
 </html>
